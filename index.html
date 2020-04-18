@@ -5,13 +5,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
+    <script>
+        window.onload = function() {
+          var context = new AudioContext();
+        }
+        </script>
 </head>
 <body>
+    <h1>CLICK</h1>
     <div class="container">
+        
         <div class="hand hourHand"></div>
         <div class="hand minuteHand"></div>
         <div class="hand secondHand"></div>
     </div>
+    <div class="display"></div>
+    <audio autoplay id="ID">
+        <source src="audio.mp3">
+  </audio>
     <script src="script.js"></script>
 </body>
 </html>
