@@ -1,30 +1,38 @@
+:root{
+    --colors1:#f77149,rgb(118, 152, 226),#aedd2b,#e373f7;
+    --colors2:#e373f7,#aedd2b,rgb(118, 152, 226),#f77149;
+}
 *{
     margin: 0;
     padding: 0;
     font-family: 'Advent Pro,Arial, Helvetica, sans-serif';
 }
 body{
-    background: linear-gradient(to bottom,orange,hotpink);
+    background-color: #cccccc;
+    background-image: linear-gradient(45deg,var(--colors1));
+    background-size:600%;
     height: 100vh;
-    width: 100%;
+    width: 100vw;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    animation:30s bg-animate  infinite alternate;
 }
 h1{
-    cursor: grab;
-    color: yellow;
+    cursor: pointer;
+    color: gold;
 }
 .container{
-    background-color: transparent;
+    background: #aaa8a8;;
+    background-size: 600%;
     width: 90%;
     max-width: 26rem;
     height: 57%;
-    border: 12px solid black;
+    border: 12px solid gold;
     border-radius: 50%;
     transform: translateY(-3px); 
-   
+    animation: 25s bg-animate infinite alternate;
 }
 .hand{
     width: 50%;
@@ -41,5 +49,14 @@ h1{
 .display{
     position: absolute;
     top: 90%;
-    font-size: 200%;
+    font-size: 1.7em;
+}
+@keyframes bg-animate{
+0%{background-position: left;}
+100%{background-position: right;}
+}
+
+@media screen and (max-width:450px){
+    body{background-size: 600%;}
+    .container{width:100%;max-width:17rem;height: 48%;}
 }
