@@ -1,5 +1,5 @@
 :root{
-    --colors1:#f77149,rgb(97, 131, 202),#c0e45d,#e373f7;
+    --colors1:#f77149,rgb(97, 131, 202),grey,#c0e45d,#f773c5;
 }
 *{
     margin: 0;
@@ -20,7 +20,8 @@ body{
 h1{
     cursor: pointer;
     color: gold;
-    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-shadow: 1px 0 0 #000,0 1px 0 #000,0 0 1px #000;
 }
 .container{
     background: purple;
@@ -48,12 +49,29 @@ h1{
     background-color: rgb(255, 239, 20);  
 }
 .display{
-    color: #b4b3b3;
+    color: #faecec;
     position: absolute;
-    top: 90%;
+    top: 85%;
     font-size: 1.7em;
     font-weight: bold;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    text-shadow: 1px 0 0 #000,0 1px 0 #000,0 0 1px #000;
+
+}
+footer{
+    text-align: center;
+    width: 100%;
+    position: fixed;
+    top: 97%;
+    font-family: sans-serif;
+    font-size: 1.3rem;
+    background: black;
+    text-shadow: 1px 0 0 grey,0 1px 0 grey,0 0 1px grey;
+    color: blanchedalmond;
+
+}
+h1,.display{
+    cursor: none;
 }
 @keyframes bg-animate{
 0%{background-position: left;}
@@ -68,7 +86,7 @@ h1{
     
 }
 
-@media screen and (max-width:450px){
+@media screen and (max-width:400px){
     body{background-size: 600%;}
     .container{width:100%;max-width:17rem;height: 48%;}
 }
