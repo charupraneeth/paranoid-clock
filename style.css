@@ -90,5 +90,5 @@ h1,.display{
 
 @media screen and (max-width:400px){
     body{background-size: 600%;}
-    .container{width:100%;max-width:17rem;height: 48%;}
+    .container{width:100%;max-width:17rem;height: 42%;}
 }
